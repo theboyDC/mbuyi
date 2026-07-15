@@ -18,3 +18,21 @@ public class StudentMember {
 
     // TODO: override toString()
 }
+
+
+
+///////////////////
+package za.co.wethinkcode.model;
+
+public class StudentMember extends Member {
+    private static final double STUDENT_FEE = 100.0;
+
+    public StudentMember(String name, String email, String memberId) {
+        super(name, email, memberId);
+    }
+
+    @Override
+    public double getMonthlyFee() {
+        return STUDENT_FEE;
+    }
+}

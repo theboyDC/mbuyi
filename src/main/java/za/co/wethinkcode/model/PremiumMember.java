@@ -18,3 +18,21 @@ public class PremiumMember {
 
     // TODO: override toString()
 }
+
+
+
+////////////////
+package za.co.wethinkcode.model;
+
+public class PremiumMember extends Member {
+    private static final double PREMIUM_FEE = 500.0;
+
+    public PremiumMember(String name, String email, String memberId) {
+        super(name, email, memberId);
+    }
+
+    @Override
+    public double getMonthlyFee() {
+        return PREMIUM_FEE;
+    }
+}

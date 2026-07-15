@@ -45,3 +45,31 @@ public class Member extends Person {
 
     }
 }
+
+
+/////////////
+package za.co.wethinkcode.model;
+
+public abstract class Member extends Person {
+    private final String memberId;
+
+    public Member(String name, String email, String memberId) {
+        super(name, email);
+        if (memberId == null || memberId.isBlank()) {
+            throw new IllegalArgumentException("Member ID cannot be empty");
+        }
+        this.memberId = memberId;
+    }
+
+    public String getMemberId() {
+        return memberId;
+    }
+
+    // Abstract method to be overridden by concrete member types
+    public abstract double getMonthlyFee();
+
+    @Override
+    public String toString() {
+        return super.toString() + " - Member ID: " + memberId;
+    }
+}

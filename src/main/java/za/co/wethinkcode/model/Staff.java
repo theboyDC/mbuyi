@@ -27,3 +27,31 @@ public class Staff {
      */
 //    TODO: declare duties()
 }
+
+
+
+/////////////////
+package za.co.wethinkcode.model;
+
+public abstract class Staff extends Person {
+    private final String staffId;
+
+    public Staff(String name, String email, String staffId) {
+        super(name, email);
+        if (staffId == null || staffId.isBlank()) {
+            throw new IllegalArgumentException("Staff ID cannot be empty");
+        }
+        this.staffId = staffId;
+    }
+
+    public String getStaffId() {
+        return staffId;
+    }
+
+    public abstract double getSalary();
+
+    @Override
+    public String toString() {
+        return super.toString() + " - Staff ID: " + staffId;
+    }
+}
