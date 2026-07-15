@@ -16,13 +16,54 @@ most visibly through method overriding or interface implementations where the sa
 
 === Question 2 ===
 #Answer below
+A problem statement is a clear, concise description of the issue that a new feature or project aims to resolve,
+and it should contain a definition of the current gap or pain point, the stakeholders affected, the desired outcome or success criteria, and any constraints or boundaries that frame the solution space.
+It is important to define this clearly before development begins because it aligns the entire team around a shared understanding of the actual need, prevents wasted effort on building the wrong solution,
+guides decision-making throughout the development lifecycle, and serves as a measurable benchmark for validating that the final deliverable truly addresses the root problem rather than just its symptoms.
 
 === Question 3 ===
 #Answer below
+Test-Driven Development (TDD) is a software development practice that follows a short,
+repetitive cycle known as "Red-Green-Refactor," where the process begins by writing a failing test for a small,
+specific piece of functionality before any production code exists—this initial "Red" stage forces the developer to clearly define the desired behavior and expected outcomes from the user's perspective.
+Next, in the "Green" stage, the developer writes the simplest possible implementation code to make that test pass,
+focusing solely on satisfying the test conditions without worrying about optimization or elegance.
+Finally, in the "Refactor" stage, the developer cleans up the code, removes duplication,
+and improves its structure while ensuring all tests continue to pass,
+thereby maintaining functionality while enhancing maintainability.
+Tests are written before implementation because this practice drives the design from the outside-in,
+ensuring that every line of code has a clear purpose and is testable by nature,
+which fundamentally influences the quality and design of the code produced—it encourages modular, loosely coupled, and highly cohesive components,
+reduces debugging time by catching defects early, and creates a comprehensive safety net of regression tests that gives developers confidence to refactor and extend the system without fear of breaking existing functionality.
+
+
 
 === Question 4 ===
 #Answer below
+The super constructor refers to the constructor of a parent class, and it exists because a subclass inherits the fields and methods of its superclass,
+meaning the parent's initialization logic must run before the subclass can add its own properties to ensure the object is properly constructed from the ground up.
+In most object-oriented languages, if a subclass constructor does not explicitly call super(),
+the compiler automatically inserts a call to the parent's no-argument constructor,
+but if the parent lacks such a constructor and only has parameterized constructors,
+the subclass will fail with a compilation error because the compiler cannot determine how to initialize the inherited part of the object.
+To resolve this, the subclass constructor must explicitly invoke super(parameters) as its first statement, passing the required arguments to match one of the parent's constructors.
+For example, if you have a parent class Vehicle with a constructor public Vehicle(String make),
+and a subclass Car whose constructor attempts to add a model field, the correct implementation would be public Car(String make,
+String model) { super(make); this.model = model; }—without that explicit super(make) call,
+the code would fail because Vehicle does not have a default no-argument constructor,
+demonstrating that the super constructor is essential for maintaining inheritance integrity and ensuring the parent class is fully initialized before the child class adds its own state.
 
 === Question 5 ===
 #Answer below
+From a technical perspective, the Robot Worlds project was built on a robust client-server architecture that managed real-time interactions and game state synchronization,
+with a multi-threaded Java server at its core to handle concurrent client connections and prevent race conditions through synchronized blocks and thread-safe collections.
+Communication between components was governed by a custom JSON-based protocol for client-server messaging,
+while a RESTful Web API using Javalin provided an HTTP interface for external integration,
+with all requests and responses formatted in JSON.
+Object-oriented principles were applied through a layered architecture that separated concerns into distinct communication, domain, and database layers,
+with inheritance used for different robot types and encapsulation ensuring data integrity within world and robot classes.
+Correctness was ensured through a comprehensive testing strategy that included Test-Driven Development (TDD) with unit tests written before implementation, acceptance tests using Given-When-Then scenarios to validate protocol compliance,
+and a fully automated CI/CD pipeline on GitLab that ran tests and built Docker images with every code push.
+
+
 
