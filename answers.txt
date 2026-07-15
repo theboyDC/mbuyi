@@ -2,6 +2,16 @@ DO NOT CHANGE THE FORMAT -- DO NOT CREATE A NEW txt file
 
 === Question 1 ===
 #Answer below
+In object-oriented programming, encapsulation is the practice of bundling data with the methods that operate on it while restricting direct external access, typically via private fields and public getters/setters;
+you would identify it in code by looking for classes that hide their internal state behind method interfaces, and it is used to protect data integrity and reduce unintended interference.
+Abstraction simplifies complex systems by exposing only essential features and hiding implementation details,
+which you can recognize through abstract classes or interfaces that define clear contracts without revealing underlying logic,
+and it serves to manage complexity and promote code reusability.
+Inheritance allows a class to derive properties and behavior from a parent class,
+identifiable by the "extends" keyword or subclass relationships,
+and it is used to establish hierarchical taxonomies and share common code.
+Polymorphism enables objects of different classes to be treated as objects of a common superclass,
+most visibly through method overriding or interface implementations where the same method call produces different behaviors, and it is used to write flexible, interchangeable code that can work with diverse object types through a unified interface.
 
 
 === Question 2 ===

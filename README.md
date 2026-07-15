@@ -323,7 +323,8 @@ Answer all five questions in the `answers.txt` file provided in your repository.
  
 ### Question 1 — Object-Oriented Programming **(10 marks)**
  
-Your team lead is reviewing your code and asks you to walk them through the four core OOP principles — Encapsulation, Abstraction, Inheritance, and Polymorphism. For each principle, explain what it is, how you would identify it when reading through a codebase, and what it is used for.
+Your team lead is reviewing your code and asks you to walk them through the four core OOP principles — Encapsulation, Abstraction, Inheritance, and Polymorphism.
+For each principle, explain what it is, how you would identify it when reading through a codebase, and what it is used for.
  
  
 ---
