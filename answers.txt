@@ -67,3 +67,231 @@ and a fully automated CI/CD pipeline on GitLab that ran tests and built Docker i
 
 
 
+=== Question 1 ===
+#Answer below
+Access modifiers are keywords in Java that control which other classes or parts of your code are allowed to see and use a field, method, or class.
+They matter because not everything in your code should be freely available to everyone,
+just like you would not give a stranger your bank PIN, some data in your program needs to be protected.
+
+The private modifier means that only code inside that same class can access that field or method.
+You would use private for sensitive data like a password or a bank balance,
+because you do not want any other class to read or change it directly.
+The public modifier means that any class anywhere in your project can access it.
+You would use public for things you intentionally want to share, like a method that other classes need to call.
+The protected modifier sits in between the private and public access modifiers.
+it allows access from within the same class, any class in the same package, and any subclass that extends it.
+You would use protected when you are building a parent class and want child classes to be able to use something,
+but you still do not want the whole world accessing it.
+
+Making everything public is a problem because it removes all protection from your code.
+
+
+exampl:
+public class bankAccount {
+    private double balance;
+
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+        }
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+}
+
+Here balance is private, so nobody outside the class can change it directly.
+They have to use the deposit method, which checks that the amount is valid first.
+If balance were public, anyone could skip that check and set it to whatever they wanted.
+
+
+=== Question 2 ===
+#Answer below
+A constructor is a special block of code inside a class that runs automatically when you create a new object from that class.
+The constructor is named exactly like the class itself, and it has no return type.
+
+A method is a block of code inside a class that performs a specific task.
+Methods are named by what they do, they have a return type or if they return nothing , the return type is void and they only run when you call them.
+You can call a method as many times as you like on an object.
+
+The key differences are:
+a constructor has the exact same name as the class while a method has its own descriptive name;
+a constructor doesn't any have a return type while a method either returns nothing(void) or returns something.
+
+Simple Java example:
+public class Animal {
+    String name;
+    int age;
+
+    public Animal(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String describe() {
+        return name + " is " + age + " years old.";
+    }
+}
+describe() is a method and Animal(String name, int age) is a constructor.
+
+DO NOT CHANGE THE FORMAT -- DO NOT CREATE A NEW txt file
+
+=== Question 1 ===
+#Answer below
+Access modifiers are keywords in Java that control which other classes or parts of your code are allowed to see and use a field, method, or class.
+They matter because not everything in your code should be freely available to everyone,
+just like you would not give a stranger your bank PIN, some data in your program needs to be protected.
+
+The private modifier means that only code inside that same class can access that field or method.
+You would use private for sensitive data like a password or a bank balance,
+because you do not want any other class to read or change it directly.
+The public modifier means that any class anywhere in your project can access it.
+You would use public for things you intentionally want to share, like a method that other classes need to call.
+The protected modifier sits in between the private and public access modifiers.
+it allows access from within the same class, any class in the same package, and any subclass that extends it.
+You would use protected when you are building a parent class and want child classes to be able to use something,
+but you still do not want the whole world accessing it.
+
+Making everything public is a problem because it removes all protection from your code.
+
+
+exampl:
+public class bankAccount {
+    private double balance;
+
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+        }
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+}
+
+Here balance is private, so nobody outside the class can change it directly.
+They have to use the deposit method, which checks that the amount is valid first.
+If balance were public, anyone could skip that check and set it to whatever they wanted.
+
+
+=== Question 2 ===
+#Answer below
+A constructor is a special block of code inside a class that runs automatically when you create a new object from that class.
+The constructor is named exactly like the class itself, and it has no return type.
+
+A method is a block of code inside a class that performs a specific task.
+Methods are named by what they do, they have a return type or if they return nothing , the return type is void and they only run when you call them.
+You can call a method as many times as you like on an object.
+
+The key differences are:
+a constructor has the exact same name as the class while a method has its own descriptive name;
+a constructor doesn't any have a return type while a method either returns nothing(void) or returns something.
+
+Simple Java example:
+public class Animal {
+    String name;
+    int age;
+
+    public Animal(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String describe() {
+        return name + " is " + age + " years old.";
+    }
+}
+describe() is a method and Animal(String name, int age) is a constructor.
+
+
+=== Question 3 ===
+#Answer below
+Loops in Java let you repeat a block of code multiple times, just like in Python,
+but the syntax is different and Java requires you to be specific about types.
+
+The standard for loop has three parts separated by semicolons inside the parentheses:
+first you initialize where you create your counter variable, like int i = 0;
+the second part is the condition that is checked before every loop it will act like a boolean,
+if the condition is true the loop will runs,
+if it is false it stops.
+the second part looks like this : i < 10;
+the last part is the update that happens after every loop, e.g. like i++ which adds 1 to i each time.
+
+The for-each loop is used when you want to go through every element in an array or a collection like a List.
+You would choose the for-each loop when you just need each element and do not care about its position and
+you would choose the standard for loop when you need the index, for example if you want to know which position you are at or if you want to loop backwards.
+
+The while loop is different from both because it only has a condition.
+You use it when you do not know in advance how many times you need to loop, and you just want to keep going as long as something is true.
+
+
+
+
+
+  #Question 1
+    An IDE, which stands for Integrated Development Environment,
+    is a software application that provides everything a developer needs to write, run, and debug code all in one place.
+    Unlike a plain text editor like Notepad, which just lets you type text,
+    an IDE understands the programming language you are working with and actively helps you as you code.
+    \On a daily basis, an IDE is valuable because it gives you features like syntax highlighting,
+    which colours your code so you can spot mistakes easily, auto-complete,
+    which suggests code as you type so you make fewer errors and work faster, and a built-in debugger,
+    which helps you pause your program and inspect what is happening when something goes wrong.
+    It also usually integrates with tools like Maven and Git so you do not have to leave the IDE to manage your project.
+    The most commonly used IDEs for Java development are IntelliJ IDEA and Eclipse.
+    IntelliJ IDEA is particularly popular among professional Java developers because of how smart its auto-complete and error detection features are.
+
+    #Question 2
+    Version control is a system that keeps track of every change made to the code over time,
+    so that you can always go back to an earlier version if something breaks.
+    The way it works is that each time you are happy with a change you made, you save a snapshot of that change called a commit,
+    and that commit is stored with a message describing what you did.
+    This means if my teammate introduced a change that broke a working feature,
+    we can look through the history of commits, find the exact commit where things went wrong,
+    and either revert to the version before that change or understand exactly what was changed so we can fix it.
+    A local repository is the copy of the project that lives on your own computer,
+    and a remote repository is the copy stored on a server like GitHub that everyone on the team can access and share.
+    The step git add is what you do before saving a snapshot. It is called staging,
+    and it lets you choose which changed files you want to include in your next commit.
+    It is a necessary step because it gives you control over exactly what goes into each commit,
+    so you do not accidentally save unfinished work or unrelated changes alongside the change you actually want to record.
+
+    #Question 3
+    A build tool is a program that automates the repetitive tasks involved in turning your source code into a working application,
+    things like compiling the code, downloading libraries your project depends on, and running your tests.
+    The problem it solves is that without one, every developer on the team has to manually figure out how to compile the project,
+    which version of each library to use, and how to run tests, and everyone ends up doing it differently which causes confusion and bugs that only appear on some machines.
+    Maven is a build tool for Java that solves this by using a single file called pom.xml where you declare everything the project needs, the dependencies, the plugins, and the project details, and Maven handles the rest automatically.
+    This means every developer on the team gets the exact same setup just by running the same commands.
+    Maven also introduces the concept of a build lifecycle, so it knows the correct order in which to do things.
+    The key commands the team would use every day are mvn clean, which deletes any previously compiled files so you start fresh, mvn compile,
+    which compiles all your Java source code, and mvn test, which compiles and then runs all your unit tests to check that nothing is broken.
+
+    #Question 4
+    A constructor is a special method in a class that runs automatically when you create a new object from that class.
+    Its job is to set up the object and give it its starting values.
+    The reason it has the same name as the class is just how Java knows it is a constructor and not a regular method.
+    A default constructor is one that takes no parameters, meaning when you create an object you do not pass any information to it,
+    and Java actually provides one invisibly if you do not write one yourself.
+    A parameterised constructor is one that takes parameters, so when you create the object you pass in values that get stored on that object right away.
+    You would define your own constructor when you want to make sure an object always starts with specific information rather than having empty or default values.
+    For example, if you have a Student class, you would write a parameterised constructor that takes a name and a student ID so that every Student object is created with those details already set, and you cannot accidentally create a student with no name.
+
+    #Question 5
+    Object-Oriented Programming, or OOP, is a way of writing programs by modelling the real world as a collection of objects,
+    where each object is a self-contained unit that holds both its data and the behaviour related to that data.
+    Your teammate's suggestion of using separate arrays for student names, marks, and IDs gets messy very quickly because all those arrays have to stay in sync manually.
+    If you add a student to the names array but forget to add a placeholder to the marks array, your data is already broken.
+    OOP solves this by letting you group all the data that belongs together into one thing.
+    A class is the blueprint or template that describes what every object of that type will look like and what it can do.
+    So you would write a Student class that says every student has a name, an ID, and a mark, and you only write that definition once.
+    An object is a single real thing created from that blueprint, so a student named Sipho with ID 1001 and a mark of 78 would be one object.
+    An instance means the same thing as an object, it is just the word used when talking about a specific copy of the class that exists in memory.
+    So instead of three separate arrays you would have a single list of Student objects, each one carrying all its own information together,
+    which makes your code far easier to read, manage, and expand later.
+
+
+
+
